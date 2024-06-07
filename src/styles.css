@@ -1,0 +1,156 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+.bookItem {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "title title"
+    "description description"
+    "removeButton modifyButton";
+  row-gap: 8px;
+  column-gap: 16px;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.id {
+  grid-area: id;
+  align-self: center;
+  justify-self: start;
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+}
+
+.title {
+  grid-area: title;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  grid-area: description;
+  font-size: 16px;
+  color: #666;
+}
+
+.addButton,
+.removeButton,
+.disregardButton,
+.editButton,
+.modifyButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.removeButton {
+  grid-area: removeButton;
+  background-color: #ff6666;
+}
+
+.disregardButton {
+  background-color: #ff6666;
+}
+
+.modifyButton {
+  grid-area: modifyButton;
+  background-color: #41b0f5;
+}
+
+.editButton {
+  background-color: #41b0f5;
+}
+
+.addButton:hover {
+  background-color: #01a517;
+}
+
+.editButton:hover,
+.modifyButton:hover {
+  background-color: #20a5f8;
+}
+
+.removeButton:hover,
+.disregardButton:hover {
+  background-color: #ff3333;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  column-gap: 24px;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input,
+.textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.ctaButtons {
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.addButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
